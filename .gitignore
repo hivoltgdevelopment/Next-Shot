@@ -1,0 +1,5 @@
+node_modules
+dist
+.env
+.DS_Store
+netlify/edge-functions/manifest.json
