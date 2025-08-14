@@ -1,36 +1,91 @@
-# Next Shot (PWA)
+# Next Shot AI 🎱👑
 
-Installable PWA that analyzes a single pool-table photo to recommend the highest-percentage shot.
-Matches Guardian app IA (tabs) and reuses your stack: Netlify + Supabase + Twilio.
+An intelligent pool/billiards training platform powered by AI, computer vision, and advanced analytics.
 
-## Quick start
+## 🚀 Live Demo
+
+Visit the live application: [Next Shot AI](https://hivoltgdevelopment.github.io/Next-Shot/)
+
+## ✨ Features
+
+- **AI-Powered Shot Analysis** - Real-time computer vision for shot tracking
+- **Smart Training Drills** - Personalized practice routines
+- **Performance Analytics** - Detailed statistics and progress tracking
+- **AR Overlay** - Augmented reality shot guidance
+- **Voice Coach** - Audio feedback and instructions
+- **Tournament Mode** - Competitive gameplay tracking
+- **Social Features** - Share achievements and compete with friends
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, TypeScript, Tailwind CSS
+- **UI Components**: Radix UI, Shadcn/ui
+- **Backend**: Supabase (Database, Auth, Storage)
+- **Deployment**: GitHub Pages
+- **Build Tool**: Vite
+
+## 🏃‍♂️ Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/hivoltgdevelopment/Next-Shot.git
+   cd Next-Shot
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your Supabase credentials
+   ```
+
+4. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+## 🚀 Deployment
+
+The app is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+
+### Manual Deployment
+
 ```bash
-pnpm i
-pnpm dev
+npm run build
+# Files will be built to ./dist directory
 ```
 
-## Configure
-1) Copy `.env.example` to `.env` and fill Supabase anon keys.
-2) Serve with `pnpm dev`, visit http://localhost:5173, and install as PWA.
+## 📝 Environment Variables
 
-## Build
-```bash
-pnpm build && pnpm preview
+Create a `.env` file with the following variables:
+
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-## Deploy (Netlify)
-- Connect the repo to Netlify.
-- Build command: `pnpm build`, Publish: `dist`
-- Add env vars (Supabase, Twilio).
-- Functions at `/.netlify/functions/<name>`.
+## 🤝 Contributing
 
-## Supabase
-Run SQL under `supabase/migrations/0001_init.sql` in a new project. Enable RLS.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## Phone (SMS) Login
-- Configure Twilio as the SMS provider in Supabase Auth settings.
-- In the app, Settings → enter phone in E.164 format and request a code.
-- Enter the 6‑digit code to complete sign‑in. The app will then sync offline data to your Supabase tables.
+## 📄 License
 
-## Sync
-- Local-first via Dexie. Dirty rows are upserted to Supabase on auth and periodically (you can call `syncUp()` on focus/background intervals).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with modern React and TypeScript
+- UI components from Radix UI and Shadcn/ui
+- Powered by Supabase backend services
+
+---
+
+Made with ❤️ by HiVolt G Development
